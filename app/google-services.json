@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "393853069246",
+    "firebase_url": "https://onlinenoteapp-8c292.firebaseio.com",
+    "project_id": "onlinenoteapp-8c292",
+    "storage_bucket": "onlinenoteapp-8c292.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:393853069246:android:3134fd7c11787031",
+        "android_client_info": {
+          "package_name": "sahin.onlinenoteapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "393853069246-2ai0fctb2ukdg1dv0eu79p8pmandqds9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sahin.onlinenoteapp",
+            "certificate_hash": "d59a11b60cb732423c1ed8abd9f3692509aba323"
+          }
+        },
+        {
+          "client_id": "393853069246-i9g4n92j3lqcb6ipiq8sqi59kndkg9lk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbgBAJNrsaVVBZJJexTpc86AF3QBZ14yQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "393853069246-i9g4n92j3lqcb6ipiq8sqi59kndkg9lk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
