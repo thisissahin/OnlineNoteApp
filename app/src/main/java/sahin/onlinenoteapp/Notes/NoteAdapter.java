@@ -59,7 +59,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteViewHolder> {
             public void onClick(View v) {
 
                     String editKey = noteList.get(position).getNoteKey();
-                    Intent i = new Intent(context,NoteUpdate.class);
+                    Intent i = new Intent(context,NoteActivity.class);
                     i.putExtra("key",editKey);
                     context.startActivity(i);
 

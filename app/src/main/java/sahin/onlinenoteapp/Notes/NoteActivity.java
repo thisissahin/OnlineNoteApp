@@ -21,14 +21,15 @@ import com.google.firebase.database.ValueEventListener;
 
 import sahin.onlinenoteapp.MainActivity;
 import sahin.onlinenoteapp.R;
+import sahin.onlinenoteapp.Settings.SharedPreferencesManager;
 
-public class NoteUpdate extends AppCompatActivity {
+public class NoteActivity extends AppCompatActivity {
     DatabaseReference mDatabaseNote;
     private String currentUserId;
     EditText noteUpdateEdit;
     private Boolean editFocusable;
     private String key;
-
+    SharedPreferencesManager mSharedPrefManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,12 +45,14 @@ public class NoteUpdate extends AppCompatActivity {
         } else {
             key= (String) savedInstanceState.getSerializable("key");
         }
+        mSharedPrefManager = new SharedPreferencesManager(this);
 
         noteUpdateEdit = findViewById(R.id.noteEditText);
         editFocusable = false;
         noteUpdateEdit.setFocusable(false);
         noteUpdateEdit.setFocusableInTouchMode(false);
         noteUpdateEdit.setClickable(false);
+        noteUpdateEdit.setTextSize(mSharedPrefManager.getVariable());
 
         currentUserId = FirebaseAuth.getInstance().getCurrentUser().getUid();
         mDatabaseNote = FirebaseDatabase.getInstance().getReference().child("Users").child(currentUserId).child("Notes");
@@ -125,7 +128,7 @@ public class NoteUpdate extends AppCompatActivity {
 
         else if(id == R.id.action_delete){
             delete(key);
-            Intent i = new Intent(NoteUpdate.this,MainActivity.class);
+            Intent i = new Intent(NoteActivity.this,MainActivity.class);
             startActivity(i);
         }
         return super.onOptionsItemSelected(item);
@@ -139,7 +142,7 @@ public class NoteUpdate extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent i = new Intent(NoteUpdate.this, MainActivity.class);
+        Intent i = new Intent(NoteActivity.this, MainActivity.class);
         startActivity(i);
     }
 

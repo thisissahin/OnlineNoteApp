@@ -26,6 +26,7 @@ import java.util.List;
 import sahin.onlinenoteapp.Notes.NoteAdapter;
 import sahin.onlinenoteapp.Notes.NoteAdd;
 import sahin.onlinenoteapp.Notes.NoteObject;
+import sahin.onlinenoteapp.Settings.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
@@ -152,6 +153,11 @@ public class MainActivity extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(MainActivity.this,LoginActivity.class);
                 startActivity(intent);
+                return true;
+
+            case R.id.settings:
+                Intent intentS = new Intent(MainActivity.this,SettingsActivity.class);
+                startActivity(intentS);
                 return true;
 
             default:
